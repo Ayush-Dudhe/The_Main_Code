@@ -1,0 +1,85 @@
+{
+    "AWS": {
+        "statistical": [ 
+            
+            {
+              "label": "Instance Selection",
+              "type": "dropdown",
+              "property": "ml_instance_type",
+              "required": true,
+              "reset": true,
+              "isSingle": "true",
+              "placeholder": "Select ML instance",
+              "value" : []
+            },
+
+            {
+              "label": "Next",
+              "type": "submitButton"
+            }
+          ],
+          "training_params" : [
+            {
+              "label": "Training Parameters",
+              "type": "formArray",
+              "property": "training_parameters",
+              "reset": true,
+              "innerControls" : [ 
+                {
+                  "label": "Objective",
+                  "type": "dropdown",
+                  "property": "objective",
+                  "required": true,
+                  "reset": true,
+                  "isSingle": "true",
+                  "placeholder": "Select objective",
+                  "value" : []
+        
+                },
+                {
+                  "label" : "Estimators",
+                  "type" : "text",
+                  "placeholder" : "Enter n_estimators",
+                  "property" : "n_estimators",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label": "Eval Metric",
+                  "type": "dropdown",
+                  "property": "eval_metric",
+                  "required": true,
+                  "reset": true,
+                  "isSingle": "true",
+                  "placeholder": "Select evaluation metric",
+                  "value" : []
+                },
+                {
+                  "label" : "Maximum depth",
+                  "type" : "text",
+                  "placeholder" : "Enter the maximum depth",
+                  "property" : "max_depth",
+                  "reset" : true,
+                  "required" : true
+                }
+              ]
+            }, 
+            {
+              "label" : "Submit",
+              "type": "submitButton"
+            }
+        ],
+
+        "dropdown": {
+            "class_type": ["stamp"],
+            "instance_type": ["ml.t2.2xlarge", "ml.t3.medium", "ml.t3.large"],
+            "ml_instance_type": ["ml.p3.2xlarge", "ml.p3.8xlarge"],
+            "objective": ["binary:logistic"],
+            "eval_metric": ["auc"]
+        }
+    },
+
+
+    "GCP": {}
+}

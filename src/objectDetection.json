@@ -1,0 +1,238 @@
+{
+    "AWS": {
+        "data_labels": [ 
+            {
+              "label": "Class Selection",
+              "type": "dropdown",
+              "property": "class_type",
+              "required": true,
+              "reset": true,
+              "isSingle": "true",
+              "placeholder": "Select class",
+              "value" : []
+            },
+
+            {
+              "label": "Instance Selection",
+              "type": "dropdown",
+              "property": "ml_instance_type",
+              "required": true,
+              "reset": true,
+              "isSingle": "true",
+              "placeholder": "Select ML instance",
+              "value" : []
+            },
+
+            {
+              "label": "Next",
+              "type": "submitButton"
+            }
+          ],
+      
+          "augmentation": [
+          
+            {
+              "label": "Enter Split Percentage",
+              "placeholder" : "Enter split percentage",
+              "type": "text",
+              "property": "split_percentage",
+              "required": true,
+              "reset": true,
+              "value" : ""
+            },
+
+            {
+              "label": "Enter instance type",
+              "placeholder" : "Enter instance type",
+              "type": "dropdown",
+              "isSingle": "true",
+              "property": "instance_type",
+              "required": true,
+              "reset": true,
+              "value" : ""
+            },
+
+            {
+              "label": "Enter instance count",
+              "placeholder" : "Enter instance count",
+              "type": "text",
+              "property": "instance_count",
+              "required": true,
+              "reset": true,
+              "value" : ""
+            },
+
+            {
+              "label": "Next",
+              "type": "submitButton"
+            }
+            
+          ],
+          
+          "training_params" : [
+            {
+              "label": "Training Parameters",
+              "type": "formArray",
+              "property": "training_parameters",
+              "reset": true,
+              "innerControls" : [ 
+      
+                {
+                  "label": "Base Network",
+                  "type": "text",
+                  "placeholder": "Enter base network",
+                  "property": "base_network",
+                  "required": true,
+                  "reset": true
+        
+                },
+                {
+                  "label" : "Pretrained Model",
+                  "type" : "text",
+                  "placeholder" : "Enter pretrained model",
+                  "property" : "use_pretrained_model",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+      
+                {
+                  "label" : "Number of Classes",
+                  "type" : "text",
+                  "placeholder" : "Enter number of classes",
+                  "property" : "num_classes",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+      
+                {
+                  "label" : "Mini Batch Size",
+                  "type" : "text",
+                  "placeholder" : "Enter mini batch size",
+                  "property" : "mini_batch_size",
+                  "reset" : true,
+                  "required" : true
+                },
+      
+                {
+                  "label" : "Number of Epochs",
+                  "type" : "text",
+                  "placeholder" : "Enter number of epochs",
+                  "property" : "epochs",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label" : "Learning rate",
+                  "type" : "text",
+                  "placeholder" : "Enter learning rate",
+                  "property" : "learning_rate",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                
+                {
+                  "label" : "Schedular Factor",
+                  "type" : "text",
+                  "placeholder" : "Enter schedular factor",
+                  "property" : "lr_schedular_factor",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                
+                
+                {
+                  "label" : "Optimizer",
+                  "type" : "text",
+                  "placeholder" : "Enter optimizer",
+                  "property" : "optimizer",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label" : "Momentum",
+                  "type" : "text",
+                  "placeholder" : "Enter momentum",
+                  "property" : "momentum",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                
+                {
+                  "label" : "Weight Decay",
+                  "type" : "text",
+                  "placeholder" : "Enter weight decay",
+                  "property" : "weight_decay",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label" : "Overlap Threshold",
+                  "type" : "text",
+                  "placeholder" : "Enter overlap threshold",
+                  "property" : "overlap_threshold",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label" : "NMS Threshold",
+                  "type" : "text",
+                  "placeholder" : "Enter NMS threshold",
+                  "property" : "nms_threshold",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label" : "Image Shape",
+                  "type" : "text",
+                  "placeholder" : "Enter image shape",
+                  "property" : "image_shape",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label" : "Label Width",
+                  "type" : "text",
+                  "placeholder" : "Enter label width",
+                  "property" : "label_width",
+                  "reset" : true,
+                  "required" : true
+        
+                },
+                {
+                  "label" : "Number of Training Samples",
+                  "type" : "text",
+                  "placeholder" : "Enter number of training samples",
+                  "property" : "num_training_samples",
+                  "reset" : true,
+                  "required" : true
+        
+                }
+              ]
+            }, 
+            {
+              "label" : "Submit",
+              "type": "submitButton"
+            }
+        ],
+
+        "dropdown": {
+            "class_type": ["stamp"],
+            "instance_type": ["ml.t2.2xlarge", "ml.t3.medium", "ml.t3.large"],
+            "ml_instance_type": ["ml.p3.2xlarge", "ml.p3.8xlarge"]
+        }
+    },
+
+
+    "GCP": {}
+}
